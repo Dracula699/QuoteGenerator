@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Quote Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background-animation"></div>
+  <header>
+    <h1>Inspiration for Your Day</h1>
+    <p>Get a fresh quote to uplift your mood!</p>
+    <label class="switch">
+      <input type="checkbox" id="toggle-mode">
+      <span class="slider round"></span>
+      <span class="toggle-text">Dark Mode</span>
+    </label>
+  </header>
+
+  <section class="category-selector">
+    <button class="category-btn" onclick="setCategory('inspirational')">Inspirational</button>
+    <button class="category-btn" onclick="setCategory('funny')">Funny</button>
+    <button class="category-btn" onclick="setCategory('life')">Life</button>
+  </section>
+
+  <div class="quote-container">
+    <h2>Daily Quote</h2>
+    <p id="quote">"Click the button to generate a quote!"</p>
+    <button id="new-quote-btn">Get Inspired</button>
+  </div>
+
+  <footer>
+    <p>Nidhi Thakare</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,383 @@
+/* Reset and Basic Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Disable page scrolling */
+html, body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* General Styling */
+/* Reset and Basic Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Dark Mode (Default) */
+  body {
+    background: linear-gradient(135deg, #1f4068, #1b1b2f);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    transition: background 0.5s, color 0.5s;
+  }
+  
+  /* Light Mode */
+  /* Light Mode Styles */
+/* Light Mode */
+body.light-mode {
+    background: linear-gradient(135deg, #add8e6, #b0e0e6); /* Soft blue gradient */
+    color: #333333;
+}
+
+  
+  body.light-mode header {
+    background: rgba(255, 255, 255, 0.8); /* Soft white background for header */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  }
+  
+  body.light-mode header h1 {
+    font-size: 2rem;
+    color: #4a90e2; /* Soft blue for header text */
+  }
+  
+  body.light-mode header p {
+    font-size: 1.2rem;
+    color: #7a7a7a; /* Light grey text */
+  }
+  
+  /* Quote Container */
+  body.light-mode .quote-container {
+    background: rgba(255, 255, 255, 0.9); /* More opaque white background */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    animation: fadeIn 2s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow */
+  }
+  
+  body.light-mode .quote-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #4a90e2; /* Soft blue for quote heading */
+  }
+  
+  body.light-mode #quote {
+    font-size: 1.3rem;
+    margin: 15px 0;
+    color: #333333; /* Darker text for better readability */
+    animation: fadeInQuote 0.8s ease-in-out, floatQuote 4s ease-in-out infinite;
+  }
+  
+  body.light-mode #new-quote-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #4a90e2; /* Soft blue button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light button shadow */
+  }
+  
+  body.light-mode #new-quote-btn:hover {
+    background-color: #357ABD; /* Slightly darker blue on hover */
+  }
+  /* Light Mode Category Buttons */
+body.light-mode .category-btn {
+    background-color: #af95e0; /* Soft purple shade */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-in-out;
+}
+
+body.light-mode .category-btn:hover {
+    background-color: #946ed5; /* Slightly darker purple on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(162, 57, 202, 0.6);
+}
+
+body.light-mode .category-btn.active {
+    background-color: #946ed5; /* Active button shade */
+    box-shadow: 0 4px 12px rgba(162, 57, 202, 0.6);
+    transform: translateY(-2px);
+}
+
+  
+  /* Dark/Light Mode Toggle Button */
+  body.light-mode .switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  body.light-mode .toggle-text {
+    color: #333333;
+    margin-left: 10px;
+  }
+  
+  body.light-mode input[type="checkbox"] {
+    display: none;
+  }
+  
+  body.light-mode .slider {
+    width: 50px;
+    height: 24px;
+    background-color: #ccc;
+    position: relative;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  
+  body.light-mode .slider::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: 0.4s;
+  }
+  
+  body.light-mode input:checked + .slider {
+    background-color: #ff5c8e; /* Vibrant pink for the toggle */
+  }
+  
+  body.light-mode input:checked + .slider::before {
+    transform: translateX(26px);
+  }
+  
+  body.light-mode .toggle-text {
+    color: #333333;
+  }
+  
+  /* Footer */
+  body.light-mode footer {
+    background: rgba(255, 255, 255, 0.9); /* Lighter footer background */
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    color: #333333;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);  /* Same background as dark mode */
+     /* Same text color as dark mode */
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    animation: fadeInFooter 2s ease-in-out;
+    
+  }
+  
+  
+  /* Header Styling */
+  /* Header Styling */
+header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3); /* Same background as dark mode */
+    color: #e3e3e3; /* Same text color as dark mode */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Same shadow as dark mode */
+    border-radius: 8px;
+}
+
+  header h1 {
+    font-size: 2rem;
+    color: #e43f5a;
+  }
+  
+  /* Dark/Light Mode Toggle Button */
+  .switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .toggle-text {
+    color: #e3e3e3;
+    margin-left: 10px;
+  }
+  
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+  .slider {
+    width: 50px;
+    height: 24px;
+    background-color: #ccc;
+    position: relative;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  
+  .slider::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: 0.4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #e43f5a;
+  }
+  
+  input:checked + .slider::before {
+    transform: translateX(26px);
+  }
+  
+  /* Other styles remain the same */
+  
+
+input:checked ~ .toggle-text {
+    color: #000000;
+}
+
+/* Category Buttons */
+.category-selector {
+    display: flex;
+    gap: 10px;
+    margin: 20px;
+}
+
+.category-btn {
+    background-color: #6a0572;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.category-btn:hover {
+    background-color: #a239ca;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(162, 57, 202, 0.6);
+}
+
+.category-btn.active {
+    background-color: #a239ca;
+    box-shadow: 0 4px 12px rgba(162, 57, 202, 0.6);
+    transform: translateY(-2px);
+}
+
+/* Main Quote Container */
+.quote-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    animation: fadeIn 2s ease-in-out;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.quote-container:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.quote-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #e43f5a;
+}
+
+#quote {
+    font-size: 1.3rem;
+    margin: 15px 0;
+    color: #e3e3e3;
+    animation: fadeInQuote 0.8s ease-in-out, floatQuote 4s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInQuote {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatQuote {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* New Quote Button */
+#new-quote-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #e43f5a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#new-quote-btn:hover {
+    background-color: #d63447;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(228, 63, 90, 0.6);
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.3); /* Same background as dark mode */
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    color: #e3e3e3; /* Same text color as dark mode */
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    animation: fadeInFooter 2s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Same shadow as dark mode */
+    border-radius: 8px;
+}
+
+@keyframes fadeInFooter {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
